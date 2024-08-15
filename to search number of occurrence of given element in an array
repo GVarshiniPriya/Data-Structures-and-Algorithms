@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int count(int arr[], int n, int x)
+{int count = 0;
+ for (int i = 0; i < n; i++) {
+     if (x == arr[i])
+       count++; 
+} 
+return count; 
+}
+int main() {
+ int arr[50], s, x;
+ cout << "Enter the total number of elements of the array: " << endl;
+ cin >>s ;
+ cout << "Enter the elements of the array: " << endl;
+for (int i = 0; i < s; i++)
+    { cin >> arr[i]; }
+ cout << "Enter the element for which you need to know about its frequency in the given array: " << endl;
+ cin >> x;
+ cout << "The total number of times the element occurred: " << count(arr, s, x) << endl; 
+return 0;
+}
